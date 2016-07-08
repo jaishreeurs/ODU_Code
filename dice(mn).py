@@ -6,7 +6,7 @@ while total!=m*n:
     dice=random.randrange(1,7)
     print ("the die value is" ,dice)
     if(total<m*n):
-        rollAgain="yes"
+        
         total=total+ dice
         print(total)
         x=total%n
