@@ -1,25 +1,31 @@
 import random
-sum=0
-while sum<16:
+total=0
+
+while total!=16:
     dice=random.randrange(1,7)
     print ("the die value is" ,dice)
-    if(sum<16):
-       sum=sum+ dice
-       print(sum)
-       x=sum%4
-       y=sum//4
-
-    if y%2==1:
-       x=3-x
-       
-    print ("the position is", x,y)
-    print("\n")
-if sum==16:
-     print ("you've won")
-elif sum>16:
-     print ("this die value is not acceptable")
-     print (" the value of die is",dice)
-	 
+    if(total<16):
+        rollAgain="yes"
+        total=total+ dice
+        print(total)
+        x=total%4
+        y=total//4
+        if y%2==1:
+            x=3-x
+    print ("the position is", y,x)
+    
+         
+    while total>16:
+        print ("this die value is not acceptable")
+        total=total-dice
+        dice=random.randint(1,6)
+        print("the die value is",dice)
+        total=total+dice
+        print(total)
+        print ("the position is", y,x)
+        print("\n")
+if total==16:
+    print ("you've won")
     
 
  
