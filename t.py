@@ -5,7 +5,7 @@ while total!=16:
     dice=random.randrange(1,7)
     print ("the die value is" ,dice)
     if(total<16):
-        rollAgain="yes"
+      
         total=total+ dice
         print(total)
         x=(total-1)%4
