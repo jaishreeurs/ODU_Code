@@ -8,8 +8,8 @@ while total!=16:
         rollAgain="yes"
         total=total+ dice
         print(total)
-        x=total%4
-        y=total//4
+        x=(total-1)%4
+        y=(total-1)//4
         if y%2==1:
             x=3-x
     print ("the position is", y,x)
