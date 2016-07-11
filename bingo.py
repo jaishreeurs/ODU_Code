@@ -1,4 +1,6 @@
 import random
+rowtotal=0
+columntotal=0
 total=0
 m=input("row:")
 n=input("column:")
@@ -26,7 +28,7 @@ while answer=="yes":
 		print('\n')
 	rowtotal=[sum(z[x]) for x in range(m)]
 	print("sum of row elements:",rowtotal)
-	columntotal=[sum(z[y]) for y in range(n)]
+	columntotal=[sum(x) for x in zip(*z)]
 	print("sum of column elements:",columntotal)
 	if m in rowtotal:
 		print("bingo!You won")
@@ -34,4 +36,5 @@ while answer=="yes":
 		print("bingo!You won") 
 	print("do you want to roll the dice?:")
 	answer=raw_input()
+    
     
