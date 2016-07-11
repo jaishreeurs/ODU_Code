@@ -1,4 +1,5 @@
 import random
+import sys
 rowtotal=0
 columntotal=0
 total=0
@@ -17,7 +18,7 @@ while answer=="yes":
 	print("the die value is:",dice)
 	print(total)
 	y=(total-1)%n
-	x=total//n
+	x=(total-1)//n
 	if x%2==1:
 		y=(n-1)-y
 	print ("the position is", x,y)
@@ -32,9 +33,12 @@ while answer=="yes":
 	print("sum of column elements:",columntotal)
 	if m in rowtotal:
 		print("bingo!You won")
+		sys.exit()
 	elif n in columntotal:
 		print("bingo!You won") 
+		sys.exit()
 	print("do you want to roll the dice?:")
 	answer=raw_input()
+    
     
     
