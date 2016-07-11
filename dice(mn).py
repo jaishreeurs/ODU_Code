@@ -9,8 +9,8 @@ while total!=m*n:
         
         total=total+ dice
         print(total)
-        x=total%n
-        y=total//n
+        x=(total-1)%n
+        y=(total-1)//n
         if y%2==1:
             x=(n-1)-x
     print ("the position is", y,x)
