@@ -14,11 +14,11 @@ while answer=="yes":
 		total=0
 	print("the die value is:",dice)
 	print(total)
-	x=(total-1)%n
-	y=(total-1)//n
-	if y%2==1:
-		x=(n-1)-x
-	print ("the position is", y,x)
+	y=(total-1)%n
+	x=total//n
+	if x%2==1:
+		y=(n-1)-y
+	print ("the position is", x,y)
 	z[x][y]=1
 	for x in range(m):
 		for y in range(n):
